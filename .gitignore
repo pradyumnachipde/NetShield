@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Django
+*.sqlite3
+staticfiles/
+media/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Node.js
+node_modules/
+dist/
+.vite/
+coverage/
+
+# Machine Learning datasets
+ml/data/*
+!ml/data/.gitkeep
+*.csv
+*.parquet
+*.pcap
+*.zip
+
+# Trained ML models
+ml/models/*
+!ml/models/.gitkeep
+*.keras
+*.h5
+*.pkl
+*.joblib
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
