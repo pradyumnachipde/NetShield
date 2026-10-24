@@ -50,3 +50,9 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Processed ML data and reports
+ml/data/processed/
+ml/reports/*.json
+ml/models/*.json
+*.npz
