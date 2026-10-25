@@ -56,3 +56,6 @@ ml/data/processed/
 ml/reports/*.json
 ml/models/*.json
 *.npz
+
+# ML evaluation images
+ml/reports/*.png
