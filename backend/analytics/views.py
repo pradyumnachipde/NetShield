@@ -74,3 +74,32 @@ def classification_stats(request):
     return Response({
         "classifications": list(classifications),
     })
+
+
+
+import json
+from pathlib import Path
+
+from django.conf import settings
+from rest_framework import status
+
+
+@api_view(["GET"])
+def model_metrics(request):
+    report_path = (
+        Path(settings.BASE_DIR).parent
+        / "ml"
+        / "reports"
+        / "evaluation_metrics.json"
+    )
+
+    if not report_path.exists():
+        return Response(
+            {"error": "Model evaluation report is unavailable."},
+            status=status.HTTP_503_SERVICE_UNAVAILABLE,
+        )
+
+    with open(report_path, encoding="utf-8") as file:
+        metrics = json.load(file)
+
+    return Response(metrics)

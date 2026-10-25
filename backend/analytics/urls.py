@@ -18,4 +18,9 @@ urlpatterns = [
         views.classification_stats,
         name="classification-stats",
     ),
+    path(
+    "model/",
+    views.model_metrics,
+    name="model-metrics",
+),
 ]
